@@ -7,6 +7,7 @@ env:
     - ROLE_NAME: ansible-scylla
   matrix:
     - MOLECULE_DISTRO: centos7
+      SCYLLADB_REPO_URL: $SCYLLADB_CENTOS_REPO_URL
 
 install:
   # Install test dependencies.
@@ -14,6 +15,7 @@ install:
 
 before_script:
   # Nothing for now
+  - echo "Before script handler"
 
 script:
   # Run tests.

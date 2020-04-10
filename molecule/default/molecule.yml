@@ -6,7 +6,7 @@ driver:
 lint: |
   set -e
   yamllint .
-  ansible-lint
+  ansible-lint .
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
@@ -19,3 +19,7 @@ provisioner:
   name: ansible
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+  inventory:
+    group_vars:
+      all:
+        scylladb_repo_url: ${SCYLLADB_REPO_URL}
