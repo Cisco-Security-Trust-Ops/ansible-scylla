@@ -1,4 +1,6 @@
 ---
-- name: Hello World
-  debug:
-    msg: Hello World
+# Setup/install tasks.
+- include_tasks: "setup.yml"
+
+# Configure tasks.
+- include_tasks: "configure.yml"

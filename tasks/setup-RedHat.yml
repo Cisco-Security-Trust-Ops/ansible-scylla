@@ -1,0 +1,17 @@
+---
+
+- name: Install epel release
+  package:
+    name: epel-release
+    state: present
+
+- name: Install repo
+  get_url:
+    url: "{{ scylladb_repo_url }}"
+    dest: /etc/yum.repos.d/scylla.repo
+    mode: '0440'
+
+- name: Ensure ScyllaDB is installed on RHEL.
+  package:
+    name: "{{ scylladb_package_name }}"
+    state: present
