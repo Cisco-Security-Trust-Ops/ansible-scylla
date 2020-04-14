@@ -1,4 +1,3 @@
 ---
 scylladb_conf_file: /etc/scylla/scylla.yaml
 scylladb_package_name: "scylla{{ '-'.join((scylladb_version)) }}"
-scylladb_service: scylla-server

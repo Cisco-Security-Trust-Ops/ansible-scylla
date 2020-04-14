@@ -1,3 +1,7 @@
 ---
 scylladb_repo_url: ""
 scylladb_version: ""
+
+scylladb_jmx:
+  SCYLLA_HOME: "/var/lib/scylla"
+  SCYLLA_CONF: "/etc/scylla"

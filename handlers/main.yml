@@ -1,0 +1,7 @@
+---
+# handler file for system restart
+- name: start scylla-server
+  service: name=scylla-server.service state=started enabled=yes
+
+- name: restart scylla-server
+  service: name=scylla-server.service state=restarted
