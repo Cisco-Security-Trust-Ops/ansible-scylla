@@ -3,7 +3,7 @@ scylladb_repo_url: ""
 scylladb_version: ""
 scylladb_cluster_name: ""
 scylladb_seed_servers: ""
-scylladb_developer_mode: ""
+scylladb_developer_mode: "true" # This should be set to false for production
 
 scylladb_jmx:
   SCYLLA_HOME: "/var/lib/scylla"
