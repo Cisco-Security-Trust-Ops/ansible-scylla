@@ -1,0 +1,8 @@
+---
+# handler file for system restart
+
+- name: restart scylla-server
+  service:
+    name: scylla-server.service
+    state: restarted
+    enabled: yes

@@ -1,5 +1,10 @@
 ---
 
+- name: ABRT conflict with Scylla coredump configuration, remove ABRT
+  package:
+    name: abrt
+    state: absent
+
 - name: Install epel release
   package:
     name: epel-release
@@ -15,3 +20,4 @@
   package:
     name: "{{ scylladb_package_name }}"
     state: present
+  notify: "restart scylla-server"

@@ -1,1 +1,17 @@
 ---
+# tasks file for scylladb
+
+- name: set configuration files permissions
+  file:
+    path: '/etc/scylla'
+    owner: scylla
+    group: scylla
+
+- name: Send scylla configuration template to hosts
+  template:
+    src: scylla.yaml.j2
+    dest: "{{ scylladb_conf_file }}"
+    owner: "scylla"
+    group: "scylla"
+    mode: '0644'
+  notify: "restart scylla-server"
