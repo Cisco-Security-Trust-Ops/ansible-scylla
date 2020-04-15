@@ -1,0 +1,15 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: STO Trust
+  description: Scylla installation and configuration for Linux.
+  company: "Cisco"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.7
+  platforms:
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - scylla
