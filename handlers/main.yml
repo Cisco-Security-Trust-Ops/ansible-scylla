@@ -4,5 +4,5 @@
 - name: restart scylla-server
   service:
     name: scylla-server.service
-    state: restarted
-    enabled: yes
+    state: "{{ scylladb_state }}"
+    enabled: "{{ scylladb_enabled }}"

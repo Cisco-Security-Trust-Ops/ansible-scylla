@@ -21,9 +21,17 @@ The version of the file.  If not given, the version is the point is the present 
 Set the selected cluster_name for the cluster. The default cluster name is 'Test Cluster'. The Cluster name of an existing cluster can't be changed
 
     scylladb_developer_mode: "true"
-    
+
 For test environments set scylladb_developer_mode to "true" to prevent Scylla from performing operating system and hardware configuration checks which could fail the startup of the node. For production the value has to be changed to "false".
 
+    scylladb_state: "restarted"
+
+Restart handler variable whether the service should be restarted when handler is called.
+
+    scylladb_enabled: "yes"
+
+Restart handler variable whether the service should start on boot. Default is set to "enabled == yes"
+    
 ## Dependencies
 
 None.

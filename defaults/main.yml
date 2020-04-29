@@ -3,3 +3,5 @@ scylladb_repo_url: ""
 scylladb_version: ""
 scylladb_cluster_name: ""
 scylladb_developer_mode: "true" # This should be set to false for production
+scylladb_state: "restarted"
+scylladb_enabled: "yes"
